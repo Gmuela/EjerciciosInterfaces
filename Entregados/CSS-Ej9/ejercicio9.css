@@ -1,0 +1,40 @@
+div.menu{
+    
+    padding: 0.3em;
+    
+    float: left;
+        
+}
+
+li a{
+    
+    text-decoration: none;
+    
+  
+    
+}
+
+
+li{
+    
+    margin: 5px;
+    
+    list-style-image: url("img/flecha_inactiva.png");  
+        
+}
+
+li:hover{
+    
+    list-style-image: url("img/flecha_activa.png");
+    
+    background-color: #E4E4E4;
+    
+}
+
+table,tr,td{
+    
+    border: 1px solid black;
+    
+    border-collapse: collapse;
+    
+}

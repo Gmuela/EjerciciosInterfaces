@@ -1,0 +1,101 @@
+
+
+#titulo{
+    
+    font-size: 30px;
+    
+    color:cadetblue;
+    
+}
+
+strong{
+    
+    color: red;
+    
+}
+
+.destacado{
+    
+    color: darkorange;
+    
+}
+
+#subtitulo{
+    
+    color: blue;
+    
+}
+
+a{
+    
+    color: red;
+    
+}
+
+span.especial{
+    
+    color: purple;
+    
+}
+
+a>em{
+    
+    color: blue;
+    
+}
+
+table,td,tr,th{
+    
+    border: 1px solid black;
+    
+    border-collapse: collapse;
+    
+    text-align: center;
+    
+    padding: 5px;
+    
+    color: green;
+    
+}
+
+th.especial{
+    
+    color: orange
+    
+}
+
+table strong{
+    
+    color: orange;
+    
+}
+
+caption{
+    
+    color: blue;
+    
+}
+
+th{
+    
+    color: red;
+    
+}
+
+#adicional{
+    
+    color: #90BC44;
+        
+}
+
+#especial{
+    
+    color: orchid;
+    
+}
+
+#adicional a{
+    
+    color: green;
+    
+}

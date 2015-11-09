@@ -1,0 +1,102 @@
+li {
+    
+    list-style: none;
+    
+    padding: 4px;
+}
+
+
+.requerido{
+    
+    font-size: 1.3em;
+    
+    color: red;  
+}
+
+.titulo{
+    
+    font-weight: bold;
+}
+
+input+label,select+label{
+    
+    display: block;
+    
+    font-size: 0.5em;
+    
+    color: grey;
+    
+    margin-bottom: 0.7em;   
+    
+}
+
+input,select{
+    
+    border-top: 1px #848484 solid;
+    
+    border-left: 1px #848484 solid;
+    
+    border-right: 1px #E6E6E6 solid;
+    
+    border-bottom: 1px #E6E6E6 solid;
+    
+    
+    
+}
+
+#nombre{
+    
+    width: 110px
+    
+}
+
+#apellido1,#apellido2{
+    
+    width: 200px;
+    
+}
+
+
+
+.foot{
+    
+   border-top: 2px solid #BDBDBD;
+    
+    width: 68%;
+    
+    padding: 0.5em
+    
+}
+
+#alta{
+    
+    float: right;
+    
+}
+
+
+li:hover{
+    
+    background-color: #F7BE81;
+    
+}
+
+input:focus,select:focus{
+    
+    
+    border-color: #FE2E2E
+}
+
+li.foot{
+    
+    background-color: white;
+    
+}
+
+.ayuda{
+    
+    display: none;
+    
+}
+
+

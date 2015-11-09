@@ -1,0 +1,77 @@
+.menu1 li{
+    
+    list-style: none;
+    
+}
+
+
+.menu1 td{
+    text-align: center;
+    border-radius: 3px;
+    background-color: coral;
+    transition: all 1s;
+}
+
+.menu1 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+
+
+.menu1 td:hover{
+    transform: scaleX(1.2);
+    background-color: brown;
+    
+}
+
+
+/************************************/
+
+
+
+.menu2 li{
+    
+    list-style: none;
+    
+}
+
+
+.menu2 td{
+    text-align: center;
+    border-radius: 3px;
+    background-color: royalblue;
+    transform-style: preserve-3d;
+    transition: all 1s;
+    
+}
+
+
+
+.menu2 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+
+
+.menu2 td:hover{
+        
+    transform: translateX(25px) rotateY(360deg);
+    
+    background-color: darkorange;
+   
+
+}
+
+span{
+    
+    background-color: black;  
+    
+}
+
+
+
+

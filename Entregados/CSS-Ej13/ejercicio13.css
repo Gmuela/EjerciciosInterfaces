@@ -1,0 +1,104 @@
+body{
+    
+    background-image: url(img/corchobg.jpg);    
+    background-size: 500px;      
+    padding: 40px;
+    
+}
+
+.pinchoIzq{
+    
+    width: 30%;
+    position: absolute;    
+    margin-left: -40px;
+    z-index: 1;    
+    transition: all 0.3s;
+    padding-bottom: 10px;
+}
+
+.pinchoDer{
+    
+    width: 30%;
+    position: absolute;    
+    margin-left: 210px;
+    z-index: 1;    
+    transition: all 0.3s;
+    padding-bottom: 10px;
+}
+
+.pinchoCen{
+    
+    width: 30%;
+    position: absolute;    
+    margin-left: 90px;
+    z-index: 1;    
+    transition: all 0.3s;
+    padding-bottom: 10px;
+}
+
+
+
+#galeria div{
+    
+    width: 300px;
+    height: 300px;
+    border: 15px solid #E7E7E7;
+    border-bottom: 55px solid #E7E7E7;
+    background-color: black;
+    margin: 60px;
+    float:left;
+    box-shadow: 1px 1px 15px;
+        
+}
+
+img.foto{
+    
+    width: 300px;
+    width: 300px;
+    opacity: 0.2;
+    transition: all 1s;
+    
+}
+
+img.foto:hover{ 
+    
+    opacity: 1;
+    
+}
+
+.rota1{
+    
+    transform: rotate(15deg);
+    transition: all 1s;    
+}
+
+.rota1:hover{
+    
+    transform: rotate(0deg) scale(1.4);
+}
+
+.rota2{
+    
+    transform: rotate(-25deg);
+    transition: all 1s;
+}
+
+.rota2:hover{
+    
+    transform: rotate(0deg) scale(1.4);    
+}
+
+.rota3{
+    
+    transform: rotate(4deg);
+    transition: all 1s;    
+}
+
+.rota3:hover{
+    
+    transform: rotate(0deg) scale(1.4);
+}
+
+
+
+

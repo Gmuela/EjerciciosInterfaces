@@ -1,0 +1,63 @@
+#contenedor{    
+    width: 600px;    
+    height: 600px; 
+    margin: 80px;
+    perspective: 800px;    
+}
+
+#cover{    
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;  
+    transition: transform 1s;
+}
+
+#cover div{    
+    position: absolute;
+    width: 100%;    
+    height: 100%;    
+    backface-visibility: hidden;    
+}
+
+.front{  
+     background-image: url(Day_of_the_Dead_cover600.jpg);
+}
+
+.back{   
+    background-color: #D3D3D3;  
+    transform: rotateY(180deg); 
+    
+}
+
+#cover:hover{    
+    transform: rotateY(180deg);    
+}
+
+li{
+    
+    font-size: 1.95em;
+    margin-left: 20px;
+    
+    
+}
+
+ol li:before{
+    
+    color: white;
+    
+}
+
+a{
+    
+    color: white;
+    
+    text-decoration: none;
+    
+}
+
+a:hover{
+    
+    color: crimson;
+    
+}

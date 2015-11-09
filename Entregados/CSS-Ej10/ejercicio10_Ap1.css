@@ -1,0 +1,192 @@
+float{
+    
+    float:left;
+    
+}
+
+li {
+    
+    width: 35%;
+    
+    
+    
+    list-style: none;
+    
+    padding: 4px;
+}
+
+
+.requerido{
+    
+    display: inline;
+    
+    font-size: 1.3em;
+    
+    color: red;  
+}
+
+.titulo{
+    
+    font-weight: bold;
+    
+}
+
+input+label,select+label{
+    
+    display: block;
+    
+    width: 100px;
+    
+    font-size: 0.5em;
+    
+    color: grey;
+    
+    margin-bottom: 0.7em;   
+    
+}
+
+input,select{
+    
+    border-top: 1px #848484 solid;
+    
+    border-left: 1px #848484 solid;
+    
+    border-right: 1px #E6E6E6 solid;
+    
+    border-bottom: 1px #E6E6E6 solid;
+    
+}
+
+.ayuda{
+    
+    display: none;
+    
+}
+
+#nombre{
+    
+    width: 110px
+    
+}
+
+#apellido1,#apellido2{
+    
+    width: 200px;
+    
+}
+
+.codmun{  
+    
+    float: left;
+    width: 49%;
+    
+   
+}
+
+input#codigopostal{
+    
+    width: 95%;
+    
+    
+    
+   
+}
+
+input#municipio{   
+    
+    width: 100%;
+        
+   
+    
+}
+
+.propa{  
+    
+    float: left;
+    width: 49%;
+    
+   
+}
+
+
+select#provincia{
+    
+    width: 96%;
+    
+}
+
+select#pais{
+    
+    width: 110px;
+
+    
+}
+
+.telef{  
+    
+    float: left;
+    width: 49%;
+    
+   
+}
+
+input#telefonofijo{
+    
+    float: left;
+    
+    width: 95%;
+    
+}
+
+
+input#telefonomovil{
+    
+    float: left;
+    
+    width: 90px;
+    
+}
+
+
+
+input+label,select+label{  
+    
+   width: 65%    
+}
+
+.foot{
+    
+   border-top: 2px solid #BDBDBD;
+    
+    width: 68%;
+    
+    padding: 0.5em
+    
+}
+
+#alta{
+    
+    float: right;
+    
+}
+
+
+li:hover{
+    
+    background-color: #F7BE81;
+    
+}
+
+input:focus,select:focus{
+    
+    
+    border-color: #FE2E2E
+}
+
+li.foot{
+    
+    background-color: white;
+    
+}
+
+

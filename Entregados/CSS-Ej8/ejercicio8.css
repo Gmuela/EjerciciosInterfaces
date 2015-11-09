@@ -1,0 +1,53 @@
+div.borde{
+    
+    border: 2px dashed darkslategray;
+    
+    overflow: hidden;
+    
+}
+
+
+
+div.flecha{
+    
+    width: 256px;
+    
+    height: 256px;
+    
+    background: url("img/flechas.png") no-repeat;
+    
+    margin: 10px;
+    
+}
+
+div.izquierda{
+    
+    background-position: 0px -256px;
+    
+    float: left;
+    
+}
+
+div.izquierda:hover{
+    
+    background-position: 0px -512px;
+    
+    float: left;
+    
+}
+
+div.derecha{
+    
+    background-position: 0px -767px;
+    
+    float: right;
+    
+}
+
+div.derecha:hover{
+    
+    background-position: 0px -0px;
+    
+    float: right;    
+    
+}
