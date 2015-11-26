@@ -1,0 +1,47 @@
+body{
+    
+    background-color: #5A796B;
+    text-align: center;
+    font-family: serif;
+    font-size: 1.2em;
+    color: white;
+    
+}
+
+img{
+    
+    width: 40%;
+    margin: 10px;
+    
+}
+
+img.especial{
+    
+    width: 60%;
+    
+}
+
+a{
+    
+    color: #5AB86D;    
+}
+
+.externo{
+    
+    width:50%;
+    padding-top:64%;
+    position:relative;    
+    display:inline-block;
+    
+}
+
+.video_externo{
+    
+    width:100%;
+    height:90%;
+    position:absolute;
+    left:0;
+    top:0;
+    overflow:hidden;
+    
+}
