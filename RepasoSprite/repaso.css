@@ -1,0 +1,89 @@
+div{
+    
+    float: left;
+    margin: 5px;
+    
+}
+
+div.twitter1:hover{
+    
+    opacity: 0;
+    
+}
+
+div.twitter2:hover{
+    
+    opacity: 1;
+    
+}
+
+
+div.container{
+    
+    padding: 10px;
+    
+}
+
+div.twitter1{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    transition-duration: 1.3s;
+    
+}
+
+div.twitter2{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    background-position-y: -48px; 
+    width: 48px;
+    height: 48px;
+    transition-duration: 1.3s;   
+    position: absolute;
+    opacity: 0;
+    
+}
+
+/*div.sprite2{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px; 
+    background-position-x:-96px; 
+    
+}
+
+
+div.sprite3{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px; 
+    background-position-x:-144px;
+    
+}
+
+div.sprite4{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;  
+    background-position-x:-192px;
+    
+}
+
+div.sprite5{
+    
+    background-image: url(sprite7.png);
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;  
+    background-position-x:-48px;
+    
+}*/
