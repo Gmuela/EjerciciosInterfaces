@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        
+        var parrafos = 0;
+
+        function cuenta() {
+
+            $("#cont").val($('p').length);
+
+        }
+
+        function crea() {
+
+            $("#parrafos").html($("#parrafos").html() + "<p>Párrafo " + parrafos + "</p>");
+            
+            parrafos++;
+
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+
+    <input type="button" onclick="crea()" value="Crear">
+
+    <input type="button" onclick="cuenta()" value="Contar">
+    
+    Contador de párrafos <input type="text" readonly id="cont">
+
+    <div id="parrafos"></div>
+
+
+</body>
+
+
+</html>
