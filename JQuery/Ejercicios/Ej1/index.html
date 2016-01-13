@@ -13,6 +13,24 @@
         #blog p.excerpt {
             display: none;
         }
+        
+        .borde{
+            
+            border: 1px solid blue;
+            
+        }
+        
+        .current{
+            
+            border: 1px solid red;
+            
+        }
+        
+        .disabled{
+            
+            border: 1px solid green;
+            
+        }
 
     </style>
 
@@ -21,18 +39,48 @@
     <!--Ejercicio1-->
 
     <script type="text/javascript">
+        /*Selecciones*/
+
         $("document").ready(
 
             function() {
 
                 $("div").filter(".module");
-                $("#myList li:eq(3)");
-                $("ul.myList li:eq(3)");
-                $("ul.myList li.myListItem");
-                /*Elemento label del elemento input*/
-                console.log("Ocultos: "+$("p").css("display").length);
 
+                console.log($("#myList li:eq(2)").text());
+                console.log($("#main ul:eq(1) li:eq(2)").text());
+                console.log($("#myListItem").text());
 
+                console.log($("label").attr("for"));
+
+                console.log("Ocultos: " + $("*:hidden").length);
+
+                console.log("Imágenes con alt: " + $("img").attr("alt").length);
+
+                $("table td:odd");
+
+            }
+        );
+
+        /*Recorrer el DOM*/
+
+        $("document").ready(
+
+            function() {
+
+                $("img").each(function(index, imagen) {
+
+                    console.log("Imagen " + index + " alt: " + $(imagen).attr("alt"));
+
+                });
+
+                $("input").parent("form").addClass("borde");
+                
+                $("#myList li.current").removeClass("current").next("li").addClass("current");
+                
+                $("#specials select").closest("input[type=submit]");
+                
+                $("#slideshow li:first").addClass("current").siblings().addClass("disabled");
             }
         );
 

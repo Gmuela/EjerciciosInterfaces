@@ -1,0 +1,61 @@
+<!--EJEMPLO CON EACH-->
+
+<html>
+
+<head>
+
+    <style>
+        .enmarcado1 {
+            width: 35px;
+            font-size: 10px;
+        }
+        
+        .enmarcado2 {
+            width: 45px;
+            font-size: 20px;
+        }
+        
+        .enmarcado3 {
+            width: 55px;
+            font-size: 30px;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        function analizar() {
+
+            var $div = $("div");
+
+            $div.each(function(index, elemento) {
+
+                console.log("El div número " + index + " tiene un ancho de " + $(elemento).css("width")+ " y un FontSize de "+$(elemento).css("font-size"));
+
+
+            });
+
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="enmarcado1">Hola</div>
+    <div class="enmarcado2">Hola</div>
+    <div class="enmarcado3">Hola</div>
+
+    <br>
+
+    <input type="button" value="Función" onclick="analizar()">
+
+
+
+</body>
+
+
+</html>

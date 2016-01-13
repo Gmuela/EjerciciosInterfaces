@@ -1,0 +1,93 @@
+<!--EJEMPLO CON CAMBIOS DE CLASE Y ESTILO-->
+
+<html>
+
+<head>
+
+    <style>
+        p.clase1 {
+            color: red;
+            font-weight: bold;
+        }
+        
+        div.enmarcado{
+            
+            border: 1px solid red;
+            
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        
+
+        function myToggle() {
+            
+            var $p = $("p");
+
+            $p.toggleClass("clase1");
+        }
+
+        function myAdd() {
+            
+            var $p = $("p");
+
+            $p.addClass("clase1");
+        }
+
+        function myRemove() {
+            
+            var $p = $("p");
+
+            $p.removeClass("clase1");
+        }
+        
+        function ancho() {
+            
+            var $div = $("div");
+
+            $div.width("150px")
+        }
+        
+        function alto() {
+            
+            var $div = $("div");
+
+            $div.height("150px")
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <p class="clase1">Párrafo 1</p>
+    <p class="clase1">Párrafo 2</p>
+    <p class="clase1">Párrafo 3</p>
+    <p class="clase1">Párrafo 4</p>
+
+    <input type="button" value="Toggle" onclick="myToggle()">
+    <input type="button" value="Remove" onclick="myRemove()">
+    <input type="button" value="Add" onclick="myAdd()">
+    
+    <br>
+    <br>
+    
+    <div class="enmarcado">Hola</div>
+    
+    <br>
+
+    <input type="button" value="Ancho" onclick="ancho()">
+
+    <input type="button" value="Alto" onclick="alto()">    
+   
+
+
+</body>
+
+
+</html>
