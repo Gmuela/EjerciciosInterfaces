@@ -14,24 +14,17 @@
             display: none;
         }
         
-        .borde{
-            
+        .borde {
             border: 1px solid blue;
-            
         }
         
-        .current{
-            
+        .current {
             border: 1px solid red;
-            
         }
         
-        .disabled{
-            
+        .disabled {
             border: 1px solid green;
-            
         }
-
     </style>
 
     <script type="text/javascript" src="../jquery-2.2.0.js"></script>
@@ -75,15 +68,44 @@
                 });
 
                 $("input").parent("form").addClass("borde");
-                
+
                 $("#myList li.current").removeClass("current").next("li").addClass("current");
-                
+
                 $("#specials select").closest("input[type=submit]");
-                
+
                 $("#slideshow li:first").addClass("current").siblings().addClass("disabled");
             }
         );
 
+        /*Modificación*/
+
+        $("document").ready(
+
+            function() {
+
+                var nuevosItems = [];
+
+                for (var i = 0; i < 5; i++) {
+
+                    nuevosItems.push("<li>New List Item " + (i + 1) + "</li>");
+
+                }
+
+                $("#myList").append(nuevosItems.join(""));
+
+                $("#myList li:odd").remove();
+
+                $("div.module:last").append("<h2>Nuevo H2</h2><br><p>Nuevo Párrafo</p>");
+
+                $("select[name=day]").append("<option value=wednesday>Wednesday</option>");
+
+                var $copiaImagen = $("img[alt=fruit]").clone();
+
+                $("div.module:last").append("<div class=module id=nuevo>");
+                
+                $("#nuevo").append($copiaImagen);
+            }
+        );
     </script>
 
 </head>

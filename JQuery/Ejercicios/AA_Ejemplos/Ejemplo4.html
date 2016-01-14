@@ -1,0 +1,88 @@
+<!--EJEMPLOS MODIFICAR ELEMENTOS-->
+
+<html>
+
+<head>
+
+    <style>
+        .enmarcado1 {
+            border: 1px solid green;
+        }
+        
+        .enmarcado2 {
+            border: 1px solid blue;
+        }
+        
+        .enmarcado3 {
+            border: 1px solid red;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        function mover() {
+
+            var $div = $("div.enmarcado1");
+
+            $div.insertAfter("div.enmarcado3");
+        }
+        
+        function copiar() {
+
+            var $div = $("div.enmarcado1");
+
+            $div.clone().appendTo("div.enmarcado3");
+        }
+        
+        function borrar1() {
+
+            var $div = $("div.enmarcado1");
+
+            $div.remove();
+        }
+        
+        function borrar2() {
+
+            var $div = $("div.enmarcado1");
+
+            $div.detach();
+        }
+        
+        function crear() {
+
+            var $nuevoDiv = $("<div>Nuevo Div</div>");
+
+            $nuevoDiv.insertAfter("div.enmarcado3");
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="enmarcado1">Div 1</div>
+    <br>
+
+    <div class="enmarcado2">Div 2</div>
+    <br>
+
+    <div class="enmarcado3">Div 3</div>
+
+    <br>
+
+    <input type="button" value="Mover" onclick="mover()">
+    <input type="button" value="Copiar" onclick="copiar()">
+    <input type="button" value="Borrar.Remove" onclick="borrar1()">
+    <input type="button" value="Borrar.Detach" onclick="borrar2()">
+    <input type="button" value="Crear" onclick="crear()">
+
+
+
+</body>
+
+
+</html>
