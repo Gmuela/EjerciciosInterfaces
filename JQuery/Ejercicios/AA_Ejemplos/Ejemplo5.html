@@ -1,0 +1,57 @@
+<!--EJEMPLOS EVENTOS-->
+
+<html>
+
+<head>
+    
+    <style>
+        
+        li{
+            
+            list-style: none;
+            font-weight: bold;
+        }
+        
+        .clase1 {
+            color: red;            
+        }        
+        
+    </style>
+    
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            
+            $("li").on("click", function(){
+               
+                $(this).toggleClass("clase1");
+                
+                console.log("Elementos seleccionados: "+$("li.clase1").length);
+                
+            });
+            
+        });
+        
+        
+    </script>
+
+</head>
+
+
+<body>
+
+    <ul>
+    
+        <li>Interfaces</li>        
+        <li>Servidor</li>        
+        <li>Cliente</li>        
+        <li>Despliegue</li>        
+    
+    </ul>
+
+</body>
+
+
+</html>
