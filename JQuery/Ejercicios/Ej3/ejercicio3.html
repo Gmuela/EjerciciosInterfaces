@@ -1,0 +1,73 @@
+<html>
+
+<head>
+
+    <style>
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        var vocales = 0;
+
+        var consonantes = 0;
+
+        $(document).ready(function() {
+
+            var vocales = "aeiou";
+
+            var consonantes = "bcdfghjklmnñpqrstvwxyz";
+
+            var cuentaVocales = 0;
+
+            var cuentaCons = 0;
+
+            var cuentaEspacios = 0;
+
+            $("#texto").on("keypress", function(e) {
+
+                for (var i = 0; i < vocales.length; i++) {
+
+                    if (e.which == vocales.charCodeAt(i)) {
+
+                        cuentaVocales++;
+                    }
+
+                }
+
+                for (var i = 0; i < consonantes.length; i++) {
+
+                    if (e.which == consonantes.charCodeAt(i)) {
+
+                        cuentaCons++;
+                    }
+
+                }
+
+                if (e.which == 32) {
+
+                    cuentaEspacios++;
+                }
+
+                $("#cuenta").html("Vocales: " + cuentaVocales + "<br>Consonantes: " + cuentaCons + "<br>Espacios en blanco: " + cuentaEspacios);
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+    <textarea id="texto"></textarea>
+
+    <br>
+
+    <div id="cuenta"></div>
+
+</body>
+
+</html>

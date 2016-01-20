@@ -1,0 +1,71 @@
+<!--EJEMPLOS DELEGACIÓN-->
+
+<html>
+
+<head>
+    
+    <style>
+        
+        li{
+            
+            list-style: none;
+            font-weight: bold;
+        }
+        
+        .clase1 {
+            color: red;            
+        }        
+        
+    </style>
+    
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            
+            /*Si usamos esta forma, el nuevo li añadido no cogería el controlador on click*/
+            
+            /*$("ul").on("click", function(){
+               
+                $(this).toggleClass("clase1");
+                
+                console.log("Elementos seleccionados: "+$("li.clase1").length);
+                
+            });*/
+            
+            /* Para que funcione delegamos $("ul").on("click", "li", funct[...] */            
+                
+            $("ul").on("click", "li", function(){
+               
+                $(this).toggleClass("clase1");
+                
+                console.log("Elementos seleccionados: "+$("li.clase1").length);
+                
+            });
+            
+            $("<li>Empresa</li>").appendTo("ul");
+            
+        });
+        
+        
+    </script>
+
+</head>
+
+
+<body>
+
+    <ul>
+    
+        <li>Interfaces</li>        
+        <li>Servidor</li>        
+        <li>Cliente</li>        
+        <li>Despliegue</li>        
+    
+    </ul>
+
+</body>
+
+
+</html>

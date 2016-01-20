@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+    <style>
+        body {
+            background-color: grey;
+        }
+        
+        li {
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        
+        li.color1 {
+            background-color: blue;
+        }
+        
+        li.color2 {
+            background-color: grey;
+        }
+        
+        li.color3 {
+            background-color: black;
+        }
+        
+        li.color4 {
+            background-color: brown;
+        }
+        
+        div.mensaje {
+            background-color: burlywood;
+            border-radius: 5px;
+            font-size: 10px;
+            text-align: center;
+            padding-top: 5px;
+            height: 15px;
+            width: 35px;
+            position: absolute;
+            display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("li").on("click", function() {
+
+                $("body").css("background", $(this).css("background"));
+
+            });
+
+            $("li").on("mousemove", function(evento) {
+
+                var $mensaje = $("div.mensaje");
+
+                $mensaje.text($(this).attr("value"));
+
+                $mensaje.css("display", "block").css("top", (evento.pageY + 15)).css("left", (evento.pageX + 10));
+
+            });
+
+            $("li").on("mouseout", function() {
+
+                $("div.mensaje").css("display", "none");
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <li class="color1" value="Azul"></li>
+    <li class="color2" value="Gris"></li>
+    <li class="color3" value="Negro"></li>
+    <li class="color4" value="Marrón"></li>
+    <br>
+    <div class="mensaje"></div>
+
+</body>
+
+</html>
