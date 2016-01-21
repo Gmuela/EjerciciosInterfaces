@@ -1,0 +1,76 @@
+<head>
+
+    <style>
+        
+        body{
+            
+            background-color: dimgrey;
+            
+        }
+        
+        #cuadrado{
+            
+            height: 35px;
+            width: 35px;
+            background-color: crimson;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+            
+        }
+        
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        var vocales = 0;
+
+        var consonantes = 0;
+
+        $(document).ready(function() {
+
+            $("*").on("keydown",function(e){
+                
+                var codigoTecla=e.keyCode;
+                
+                if(codigoTecla==37){
+                    
+                    $("#cuadrado").css("left","-=10px");
+                    
+                }
+                
+                if(codigoTecla==38){
+                    
+                    $("#cuadrado").css("top","-=10px");
+                    
+                }
+                
+                if(codigoTecla==39){
+                    
+                    $("#cuadrado").css("left","+=10px");
+                    
+                }
+                
+                if(codigoTecla==40){
+                    
+                    $("#cuadrado").css("top","+=10px");
+                    
+                }
+                
+            });
+           
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="cuadrado"></div>
+
+</body>
+
+</html>

@@ -25,8 +25,8 @@
 
             var cuentaEspacios = 0;
 
-            $("#texto").on("keypress", function(e) {
-
+            $("#texto").on("keydown keypress", function(e) {                
+                
                 for (var i = 0; i < vocales.length; i++) {
 
                     if (e.which == vocales.charCodeAt(i)) {
@@ -47,7 +47,39 @@
 
                 if (e.which == 32) {
 
-                    cuentaEspacios++;
+                    cuentaEspacios+=0.5;
+                }
+                
+                if(e.keyCode==8){
+                    
+                    var $texto=$("#texto").val();
+                    
+                    var ultLetra=$texto.charAt($texto.length-1);                     
+                    
+                    for (var i = 0; i < vocales.length; i++) {
+
+                        if (ultLetra.charCodeAt(0) == vocales.charCodeAt(i)) {
+
+                            cuentaVocales--;
+                        }
+
+                    }
+                    
+                    for (var i = 0; i < consonantes.length; i++) {
+
+                        if (ultLetra.charCodeAt(0) == consonantes.charCodeAt(i)) {
+
+                            cuentaCons--;
+                        }
+
+                    }
+                    
+                    if (ultLetra.charCodeAt(0) == 32) {
+
+                        cuentaEspacios--;
+                        
+                    }
+                    
                 }
 
                 $("#cuenta").html("Vocales: " + cuentaVocales + "<br>Consonantes: " + cuentaCons + "<br>Espacios en blanco: " + cuentaEspacios);

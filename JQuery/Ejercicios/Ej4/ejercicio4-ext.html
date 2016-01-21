@@ -1,0 +1,83 @@
+<head>
+
+    <style>
+        
+        body{
+            
+        
+            
+        }
+        
+        #sprite{
+            
+            width: 123px;
+            height: 123px;
+            background-image: url(sprite.png);            
+            background-position-y: 246px;
+            position: relative;
+            
+        }
+        
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        var vocales = 0;
+
+        var consonantes = 0;
+
+        $(document).ready(function() {
+
+            $("*").on("keydown",function(e){
+                
+                var codigoTecla=e.keyCode;
+                
+                if(codigoTecla==37){
+                    
+                    $("#sprite").css("left","-=10px");
+                    $("#sprite").css("background-position-y","369px");
+                    $("#sprite").css("background-position-x","-=61.5px");
+                    
+                }
+                
+                if(codigoTecla==38){
+                    
+                    $("#sprite").css("top","-=10px");
+                    $("#sprite").css("background-position-y","123px");
+                    $("#sprite").css("background-position-x","-=61.5px");
+                    
+                }
+                
+                if(codigoTecla==39){
+                    
+                    $("#sprite").css("left","+=10px");
+                    $("#sprite").css("background-position-y","246px");
+                    $("#sprite").css("background-position-x","-=61.5px");
+                    
+                }
+                
+                if(codigoTecla==40){
+                    
+                    $("#sprite").css("top","+=10px");
+                    $("#sprite").css("background-position-y","492px");
+                    $("#sprite").css("background-position-x","-=61.5px");
+                    
+                }
+                
+            });
+           
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="sprite"></div>
+
+</body>
+
+</html>
