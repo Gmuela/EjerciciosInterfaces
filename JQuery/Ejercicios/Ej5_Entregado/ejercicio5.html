@@ -1,0 +1,86 @@
+<html>
+
+<head>
+
+    <style>
+        input {
+            margin: 2px;
+        }
+        
+        .seleccionado {
+            border: 2px solid #6C3399;
+            background-color: #CC5809;
+            color: white;
+        }
+        
+        .preview {
+            color: darkgrey;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("input.preview").each(function() {
+
+                $(this).val("Introduce el " + $(this).prev("label").attr("for"));
+
+            });
+
+            $("input.preview").on("focus", function() {
+
+                $(this).toggleClass("seleccionado");
+
+                $(this).removeClass("preview");
+
+                $(this).val("");
+
+
+            });
+
+            $("input.preview").on("blur", function() {
+
+                $(this).toggleClass("seleccionado");
+
+                if ($(this).val() == "") {
+
+                    $(this).val("Introduce el " + $(this).prev("label").attr("for"));
+
+                    $(this).addClass("preview");
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <form name="formulario" action="" method="get">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="idNombre" class="preview" />
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="idApellido" class="preview" />
+        <br>
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono" id="idTelefono" class="preview" />
+        <br>
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" id="idDireccion" class="preview" />
+        <br>
+        <input type="button" value="Enviar" />
+
+    </form>
+
+</body>
+
+</html>
