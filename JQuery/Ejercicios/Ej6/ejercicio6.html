@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+    <style>
+        .menu {
+            list-style: none;
+            text-align: center;
+            text-shadow: 2px 2px 4px grey;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        .menu li.padre {
+            width: 220px;
+            padding: 10px 0px;
+            border: groove #FF9442;
+            border-width: 3px 3px 3px 3px;
+            background-color: #E35E30;
+            float: left;
+        }
+
+        .menu li:hover {
+            background-color: #0BB2AC;
+            transition-duration: 1s;
+        }
+
+        .hijos {
+            list-style: none;
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: auto;
+        }
+
+        .hijos li {
+            width: 220px;
+            padding: 10px 0px;
+            border: groove #FF9442;
+            border-width: 3px 3px 3px 3px;
+            background-color: #E35E30;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("li.padre").on("mouseover", function() {
+
+                $(this).next("ul").slideDown(1000, function() {
+
+                    $("li.padre").on("mouseout", function() {
+
+                        $(this).next("ul").slideUp(100);
+
+                    });
+                });
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <ul class="menu">
+
+        <li class="padre">Programación</li>
+
+        <ul class="hijos">
+
+            <li>JQuery</li>
+            <li>PHP</li>
+
+        </ul>
+
+        <li class="padre">Noticias</li>
+
+        <ul class="hijos">
+
+            <li>Videojuegos</li>
+            <li>Música</li>
+
+        </ul>
+
+        <li class="padre">Foro</li>
+
+        <ul class="hijos">
+
+            <li>Dudas</li>
+            <li>Soporte Técnico</li>
+
+        </ul>
+
+        <li class="padre">Login</li>
+
+        <ul class="hijos">
+
+            <li>Registrarse</li>
+            <li>Perfil</li>
+
+        </ul>
+    </ul>
+
+    </div>
+
+
+</body>
+
+</html>
