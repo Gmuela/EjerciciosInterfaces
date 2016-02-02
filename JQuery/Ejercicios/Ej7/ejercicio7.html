@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+    <style>
+        div.cuadrado {
+            height: 220px;
+            width: 220px;
+            background-color: red;
+            position: absolute;
+            top: 150px;
+            left: 350px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        function ocultar() {
+
+            $("div.cuadrado").hide(1000);
+
+        }
+
+        function mostrar() {
+
+            $("div.cuadrado").show(1000);
+
+        }
+
+        function subir() {
+
+            $("div.cuadrado").slideUp(1000);
+
+        }
+
+        function bajar() {
+
+            $("div.cuadrado").slideDown(1000);
+
+        }
+
+        function subirBajar() {
+
+            $("div.cuadrado").slideToggle(1000);
+
+        }
+
+        function personalizado() {
+
+            $("div.cuadrado").hide(1000).show(200).delay(1000).slideUp(300).show(1000).queue(function(){
+
+                $(this).css({
+                    "border": "3px solid blue"
+
+                });
+
+                $(this).dequeue();
+            }).hide(1000).slideDown(5000);
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <input type="button" onclick="ocultar()" value="Hide">
+    <input type="button" onclick="mostrar()" value="Show">
+    <input type="button" onclick="subir()" value="SlideUp">
+    <input type="button" onclick="bajar()" value="SlideDown">
+    <input type="button" onclick="subirBajar()" value="SlideToggle">
+    <input type="button" onclick="personalizado()" value="Personalizado">
+    <div class="cuadrado"></div>
+
+
+</body>
+
+</html>

@@ -30,7 +30,6 @@
             display: none;
             position: absolute;
             top: 60px;
-            left: auto;
         }
 
         .hijos li {
@@ -52,7 +51,7 @@
 
                 $(this).next("ul").slideDown(200, function() {
 
-                    $("li.padre").on("mouseout", function() {
+                    $("li.padre").on("mouseleave", function() {
 
                         $(this).next("ul").slideUp(100);
 
@@ -106,7 +105,6 @@
         </ul>
     </ul>
 
-    </div>
 </body>
 
 </html>
