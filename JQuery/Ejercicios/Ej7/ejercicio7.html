@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+    <style>
+        .principal {
+            background-image: url(imagen.jpg);
+            background-position: 50% 50%;
+            width: 500px;
+            height: 500px;
+            border-radius: 5%;
+            transition: background-position 1s;
+        }
+
+        div>div {
+            width: 248px;
+            height: 248px;
+            float: left;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#uno").on("mouseover", function() {
+
+                $("div.principal").stop().css({
+
+                    "background-position": "left top"
+
+                });
+
+            });
+
+            $("#dos").on("mouseover", function() {
+
+                $("div.principal").stop().css({
+
+                    "background-position": "right top"
+
+                });
+
+            });
+
+            $("#tres").on("mouseover", function() {
+
+                $("div.principal").stop().css({
+
+                    "background-position": "left bottom"
+
+                });
+
+            });
+
+            $("#cuatro").on("mouseover", function() {
+
+                $("div.principal").stop().css({
+
+                    "background-position": "right bottom"
+
+                });
+
+            });
+
+            $("div.principal").on("mouseleave", function() {
+
+                $("div.principal").stop().css({
+
+                    "background-position": "50% 50%"
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="principal">
+        <div id="uno"></div>
+        <div id="dos"></div>
+        <div id="tres"></div>
+        <div id="cuatro"></div>
+    </div>
+
+</body>
+
+</html>
