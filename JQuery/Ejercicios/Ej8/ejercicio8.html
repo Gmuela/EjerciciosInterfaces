@@ -4,13 +4,13 @@
 
     <style>
         .principal {
-            background-image: url(eiffel.jpg);
+            background-image: url(imagen0.jpg);
             background-position: 50% 50%;
             background-size: 1000px 1000px;
             width: 500px;
             height: 500px;
             border-radius: 5%;
-            transition: background-position 1s;
+            transition: all 1s;
         }
 
         div>div {
@@ -36,6 +36,22 @@
             width: 20px;
             margin: 10px;
         }
+
+        .flechaIzq {
+            height: 150px;
+            position: absolute;
+            left: -30px;
+            top: 180px;
+            transform: rotate(180deg);
+        }
+
+        .flechaDer {
+            height: 150px;
+            position: absolute;
+            left: 395px;
+            top: 180px;
+        }
+
     </style>
 
     <script type="text/javascript" src="../jquery-2.2.0.js"></script>
@@ -93,11 +109,13 @@
 
             });
 
-            $("div.principal").on("mouseleave", function() {
+            $("div.radio").find("img").on("click", function() {
 
-                $("div.principal").stop().css({
+                $(this).attr("src", "radio-checked.png");
+                $(this).parent().siblings().find("img").attr("src", "radio.png");
+                $("div.principal").css({
 
-                    "background-position": "50% 50%"
+                    "background-image": "url(" + $(this).next("a").attr("href") + ")"
 
                 });
 
@@ -110,13 +128,27 @@
 
 <body>
 
+
+    <img src="flecha.png" class="flechaIzq">
     <div class="principal">
         <div id="uno"></div>
         <div id="dos"></div>
         <div id="tres"></div>
         <div id="cuatro"></div>
     </div>
+    <img src="flecha.png" class="flechaDer">
 
+    <div class="botones">
+        <div class="radio"><img src="radio-checked.png" />
+            <a href="imagen0.jpg"></a>
+        </div>
+        <div class="radio"><img src="radio.png" />
+            <a href="imagen1.jpg"></a>
+        </div>
+        <div class="radio"><img src="radio.png" />
+            <a href="imagen2.jpg"></a>
+        </div>
+    </div>
 </body>
 
 </html>
