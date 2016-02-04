@@ -121,7 +121,56 @@
 
             });
 
+            var $radios = $("div.radio");
+
+
+
+            $(".flechaDer").on("click", function() {
+
+            var cambiado = false;
+
+               $radios.each(function(){
+
+                   if($(this).find("img").attr("src")=="radio-checked.png" && !cambiado){
+
+                       $(this).find("img").attr("src","radio.png");
+
+                       $(this).next().find("img").attr("src","radio-checked.png");
+
+                       alert($(this).next());
+
+                       cambiado=!cambiado;
+
+                   }
+
+               });
+
+            });
+
+            $(".flechaIzq").on("click", function() {
+
+            var cambiado = false;
+
+               $radios.each(function(){
+
+                   if($(this).find("img").attr("src")=="radio-checked.png" && !cambiado){
+
+                       $(this).find("img").attr("src","radio.png");
+
+                       $(this).prev().find("img").attr("src","radio-checked.png");
+
+                       alert($(this).prev());
+
+                       cambiado=!cambiado;
+
+                   }
+
+               });
+
+            });
+
         });
+
     </script>
 
 </head>
