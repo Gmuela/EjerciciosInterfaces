@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+    <style>
+        #registro {
+            background-color: grey;
+            width: 250px;
+            height: 200px;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 0 10% 10% 0;
+            opacity: 0.25;
+            position: absolute;
+            left: -230px;
+            top: 30px;
+            color: white;
+        }
+
+        #registro input {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="../jquery-2.2.0.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#registro").on("mouseover", function() {
+
+                $(this).stop().animate({
+
+                    opacity: 1,
+                    left: 0
+
+                }, 1000, function() {
+
+                    $(this).css("backgroundColor", "orange");
+
+                });
+
+            });
+
+            $("#registro").on("mouseleave", function() {
+
+                $(this).stop().animate({
+
+                    opacity: 0.25,
+                    left: -230
+
+                }, 1000).css("backgroundColor", "grey");
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="registro">
+
+        <h2>Registro</h2> Nombre
+        <input type="text"> Apellidos
+        <input type="text">
+        <input type="button" value="Aceptar">
+
+    </div>
+
+</body>
+
+</html>
