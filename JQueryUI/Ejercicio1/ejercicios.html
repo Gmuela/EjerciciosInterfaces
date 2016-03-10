@@ -7,12 +7,84 @@
     <script type="text/javascript" src="../jqueryui/jquery-ui.js"></script>
 
     <script>
+        $(document).ready(function() {
 
-    $(document).ready(function() {
+            $("div.circulo").draggable({
+                cursor: "pointer"
+            });
 
-        $("div").draggable();
+            $("div.cuadrado").droppable({
+                accept: ".circulo",
+                drop: function(event, ui) {
 
-    });
+                    $(ui.draggable).detach().css({
+                        top: 0,
+                        left: 0
+                    }).appendTo(this);
+
+                    ui.draggable.animate({
+
+                        opacity: 0
+
+                    }, 500);
+
+                    moverCubos();
+
+                    ui.draggable.animate({
+
+                        opacity: 1
+
+                    }, 500);
+                }
+            });
+
+        });
+
+        function moverCubos() {
+
+            var control = true;
+
+            for (var i = 0; i < 15; i++) {
+
+                var numero = Math.floor((Math.random() * 400) + 1);
+
+                if (control) {
+
+                    $(".cuadrado").eq(0).delay(500).animate({
+
+                        left: "-=" + (numero / 2)
+
+                    }, 300).end().eq(1).delay(100).animate({
+
+                        left: "+=" + numero
+
+                    }, 400).end().eq(2).delay(300).animate({
+
+                        left: "-=" + (numero / 2)
+
+                    }, 350);
+                } else {
+
+                    $(".cuadrado").eq(0).delay(500).animate({
+
+                        left: "+=" + (numero / 2)
+
+                    }, 600).end().eq(1).delay(100).animate({
+
+                        left: "-=" + numero
+
+                    }, 450).end().eq(2).delay(300).animate({
+
+                        left: "+=" + (numero / 2)
+
+                    }, 300);
+                }
+
+                control = !control;
+
+            }
+
+        }
 
     </script>
 
